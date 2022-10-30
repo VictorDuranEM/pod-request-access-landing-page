@@ -9,12 +9,12 @@ function getWindowWidth() {
 }
 
 export default function BackgroundImage() {
-  
+
   const [windowWidth, setWindowWidth] = useState<number>();
   const TABLET_SIZE = 768;
   const DESKTOP_SIZE = 1024;
   let bgImage = bgMobile;
-  
+
   if (windowWidth && windowWidth < TABLET_SIZE) {
     bgImage = bgMobile;
   } else if (windowWidth && windowWidth < DESKTOP_SIZE) {
@@ -22,16 +22,14 @@ export default function BackgroundImage() {
   } else {
     bgImage = bgDesktop;
   }
-  
+
   useEffect(() => {
     setWindowWidth(getWindowWidth());
-    window.addEventListener('resize', () => setWindowWidth(getWindowWidth()));
-    return () => window.removeEventListener('resize', () => setWindowWidth(getWindowWidth()));
+    // window.addEventListener('resize', () => setWindowWidth(getWindowWidth()));
+    // return () => window.removeEventListener('resize', () => setWindowWidth(getWindowWidth()));
   }, []);
-  
+
   return (
-    <div className="absolute inset-0 -z-10">
-      <Image src={bgImage} alt="" width={windowWidth} priority className="opacity-20" />
-    </div>
+    <Image src={bgImage} alt="" width={windowWidth} priority className="absolute top-0 h-full object-cover -z-10 opacity-20 md:opacity-100 md:right-0 md:w-2/3 md:h-auto xl:object-center xl:top-1/2 xl:-translate-y-1/2" />
   );
 }

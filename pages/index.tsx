@@ -13,7 +13,7 @@ const BackgroundImage = dynamic(() => import('../components/BackgroundImage'), {
 
 export default function Home() {
   return (
-    <>
+    <div className='relative'>
       <Head>
         <title>Pod Request Access</title>
       </Head>
@@ -32,6 +32,6 @@ export default function Home() {
       </div>
       
       <BackgroundImage />
-    </>
+    </div>
   )
 }
