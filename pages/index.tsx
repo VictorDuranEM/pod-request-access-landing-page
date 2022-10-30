@@ -13,7 +13,7 @@ const BackgroundImage = dynamic(() => import('../components/BackgroundImage'), {
 
 export default function Home() {
   return (
-    <div className='relative'>
+    <div className='relative min-h-screen'>
       <Head>
         <title>Pod Request Access</title>
       </Head>
