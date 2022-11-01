@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Pod Request Access</title>
       </Head>
-      <div className='relative px-6 pt-16 pb-24 md:pt-12 md:px-10 md:pb-0 
+      <div className='relative min-h-screen px-6 pt-16 pb-24 md:pt-12 md:px-10 md:pb-0 
                       before:absolute before:inset-0
                       before:bg-[url(/mobile/image-host.jpg)] before:md:bg-[url(/tablet/image-host.jpg)] before:xl:bg-[url(/desktop/image-host.jpg)]
                       before:bg-no-repeat before:bg-cover before:opacity-20 before:md:opacity-100 before:md:left-[40%] before:xl:top-20'>
@@ -25,7 +25,7 @@ export default function Home() {
               <Title />
               <BodyText className='md:max-w-md'/>
             </div>
-            <PodcastLogos className='mt-8 row-start-3 md:mt-12' />
+            <PodcastLogos className='mt-8 row-start-3 md:mt-12 max-w-lg' />
             <div className='mt-12 md:w-fit md:inline-block md:bg-darkGray md:rounded-full md:px-1 md:mt-10'>
               <Input placeholder='Email address' className='w-full md:w-fit' />
               {/* <ErrorMessage className='mt-2 pl-8'>Oops! Please check your email</ErrorMessage> */}
